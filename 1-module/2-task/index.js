@@ -13,7 +13,7 @@ function print(text) {
  */
 function isValid(name) {
 	if (name !== null) {
-	  if (!name.match(/\s/g)) {
+	  if (!name.match(/\s/g)) { // или перебор строки на присутствие кейкода пробела
 		  if (name.length >= 4) {
 			if (isNaN(name)) {
 			  // console.log("typeof String");
