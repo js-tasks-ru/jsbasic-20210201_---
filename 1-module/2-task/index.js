@@ -12,7 +12,26 @@ function print(text) {
  * @returns {boolean}
  */
 function isValid(name) {
-  // ваш код...
+	if (name !== null) {
+	  if (!name.match(/\s/g)) { // или перебор строки на присутствие кейкода пробела
+		  if (name.length >= 4) {
+			if (isNaN(name)) {
+			  // console.log("typeof String");
+			  return true;					
+			} else if (isFinite(name)) {
+			  // console.log("typeof Number");
+			  return false;
+			}
+		  }
+		  else if (name.length < 4) {
+		  // console.log("Need more letters");
+		  return false;
+		  }
+	  } else {
+		// console.log("Find space");
+		return false;
+	  }
+	} else return false;
 }
 
 function sayHello() {
