@@ -7,7 +7,7 @@ function isEmpty(obj) {
 	if (obj === undefined) {
 		return false;
 	} else {
-		for (let key in schedule) {
+		for (let key in obj) {
 			if (true ==!!obj[key])
 				return false;
 			else if (obj[key] === undefined)
