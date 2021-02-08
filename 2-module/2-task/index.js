@@ -4,9 +4,15 @@
  * @returns {Boolean}
  */
 function isEmpty(obj) {
-	for (let key in schedule) {
-		// console.log(key);
-		return false; // есть свойство по ключам;
+	if (obj === undefined) {
+		return false;
+	} else {
+		for (let key in schedule) {
+			if (true ==!!obj[key])
+				return false;
+			else if (obj[key] === undefined)
+				return false;
+		}
 	}
-	return true; // нет свойств по ключам;
+	return true;
 }
